@@ -1,0 +1,13 @@
+:root{
+    --color-blue:#25234f;
+    --color-orange:#eb5f44;
+    --color-yellow:#fde27a;
+    --color-white:#ffffff;
+}
+
+body{
+    background-color:var(--color-blue);
+    color:var(--color-white);
+    min-height:100vh;
+    line-height:1.5;
+}
