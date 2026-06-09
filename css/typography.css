@@ -5,6 +5,13 @@
     font-style:normal;
 }
 
+@font-face{
+    font-family:"GTEesti";
+    src: url("../font/GT-Eesti-Display-Ultra-Bold.ttf");
+    font-weight:800;
+    font-style:normal;
+}
+
 body{
     font-family: "GTEesti", sans-serif;
 }

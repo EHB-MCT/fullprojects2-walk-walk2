@@ -13,9 +13,18 @@
 }
 
 .nav__logo{
+    display:inline-flex;
+    align-items:center;
     color:var(--color-yellow);
     font-size:1.25rem;
     font-weight:400;
+}
+
+.nav__logo-image{
+    display:block;
+    width:auto;
+    height:2.5rem;
+    padding: 5px;
 }
 
 .nav__list{
