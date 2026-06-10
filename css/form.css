@@ -1,0 +1,208 @@
+.report{
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    min-height:calc(100vh - 5rem);
+    padding:2.4rem 8.5rem 0;
+    overflow:hidden;
+}
+
+.report__decor{
+    position:absolute;
+    left:50%;
+    bottom:-7rem;
+    z-index:0;
+    width:min(42rem, 58vw);
+    height:auto;
+    opacity:0.95;
+    pointer-events:none;
+    user-select:none;
+    transform:translateX(-50%) rotate(-6deg);
+}
+
+.obstacle-step{
+    position:relative;
+    z-index:1;
+    width:min(100%, 46rem);
+}
+
+.obstacle-step__heading{
+    margin-bottom:3.1rem;
+    text-align:center;
+}
+
+.obstacle-step__number,
+.obstacle-step__title{
+    color:var(--color-yellow);
+    line-height:1;
+}
+
+.obstacle-step__number{
+    font-weight:800;
+    font-size:1.2rem;
+}
+
+.obstacle-step__title{
+    margin-top:0.35rem;
+    font-weight:400;
+    font-size:0.95rem;
+}
+
+.obstacle-step__stage{
+    position:relative;
+}
+
+.obstacle-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:repeat(5, 5rem);
+    gap:4.5rem 5.9rem;
+    justify-content:center;
+}
+
+.obstacle-card{
+    display:grid;
+    place-items:center;
+    width:5rem;
+    aspect-ratio:1;
+    padding:1.05rem;
+    border:0;
+    border-radius:0.65rem;
+    background:var(--color-white);
+    color:#111111;
+    box-shadow:0 0.1rem 0.2rem rgba(0, 0, 0, 0.08);
+    cursor:pointer;
+}
+
+.obstacle-card:hover,
+.obstacle-card:focus-visible{
+    outline:0.2rem solid var(--color-yellow);
+    outline-offset:0.2rem;
+}
+
+.obstacle-card img{
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+}
+
+.obstacle-card--more span{
+    display:block;
+    margin-top:-0.45rem;
+    color:#111111;
+    font-weight:800;
+    font-size:1.4rem;
+    letter-spacing:0.12rem;
+}
+
+.report__arrow{
+    position:fixed;
+    top:50%;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:3.5rem;
+    height:12.5rem;
+    border-radius:0.15rem;
+    background:var(--color-orange);
+    transform:translateY(-42%);
+    overflow:hidden;
+}
+
+.report__arrow img{
+    display:block;
+    width:2.15rem;
+    height:2.15rem;
+    object-fit:contain;
+    filter:brightness(0) saturate(100%) invert(86%) sepia(74%) saturate(345%) hue-rotate(340deg) brightness(104%) contrast(97%);
+}
+
+.report__arrow--previous{
+    left:2.6rem;
+}
+
+.report__arrow--previous img{
+    transform:rotate(180deg);
+}
+
+.report__arrow--next{
+    right:2.6rem;
+}
+
+.report__arrow--next img{
+    transform:rotate(0deg);
+}
+
+@media (max-width:64rem){
+    .report{
+        padding-inline:5rem;
+    }
+
+    .report__decor{
+        left:50%;
+        bottom:-5rem;
+        width:min(34rem, 66vw);
+        transform:translateX(-50%) rotate(-6deg);
+    }
+
+    .obstacle-grid{
+        grid-template-columns:repeat(4, 5rem);
+        gap:2rem 3rem;
+    }
+}
+
+@media (max-width:40rem){
+    .report{
+        min-height:auto;
+        padding:1.5rem 1rem 6rem;
+    }
+
+    .report__decor{
+        left:50%;
+        bottom:-3rem;
+        width:min(24rem, 86vw);
+        opacity:0.85;
+        transform:translateX(-50%) rotate(-6deg);
+    }
+
+    .obstacle-step__heading{
+        margin-bottom:2rem;
+    }
+
+    .obstacle-grid{
+        grid-template-columns:repeat(3, minmax(4.5rem, 1fr));
+        gap:1rem;
+    }
+
+    .obstacle-card{
+        width:100%;
+        max-width:5rem;
+        justify-self:center;
+    }
+
+    .report__arrow{
+        position:fixed;
+        top:auto;
+        bottom:1rem;
+        width:4rem;
+        height:4rem;
+        transform:none;
+    }
+
+    .report__arrow--previous{
+        left:1rem;
+    }
+
+    .report__arrow--next{
+        right:1rem;
+    }
+
+    .report__arrow img{
+        width:1.9rem;
+        height:1.9rem;
+    }
+}

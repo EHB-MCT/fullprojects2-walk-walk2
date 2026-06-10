@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type obstakel | Walk Brussels</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="nav__logo" href="../index.html">
+                <img class="nav__logo-image" src="../images/icons/walkyellow.png" alt="Walk Brussels">
+            </a>
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Over ons</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--button" href="obstacle.html">meld een obstakel</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="report">
+        <img
+            class="report__decor"
+            src="../images/icons/fl%C3%A8che3_jaune.avif"
+            alt=""
+            aria-hidden="true"
+        >
+
+        <a class="report__arrow report__arrow--previous" href="../index.html" aria-label="Vorige stap">
+            <img src="../images/icons/arrow_next-button.svg" alt="" aria-hidden="true">
+        </a>
+
+        <section class="obstacle-step" aria-labelledby="obstacle-title">
+            <div class="obstacle-step__heading">
+                <p class="obstacle-step__number">1. Type obstakel</p>
+                <h1 class="obstacle-step__title" id="obstacle-title">Wat hindert je op de stoep?</h1>
+            </div>
+
+            <div class="obstacle-step__stage">
+                <div class="obstacle-step__line" aria-hidden="true">
+                    <span class="obstacle-step__curve obstacle-step__curve--left"></span>
+                    <span class="obstacle-step__curve obstacle-step__curve--center"></span>
+                    <span class="obstacle-step__curve obstacle-step__curve--right"></span>
+                </div>
+
+                <form class="obstacle-grid" action="photo.html">
+                    <button class="obstacle-card" type="submit" name="obstacle" value="car" aria-label="Auto">
+                        <img src="../images/icons/car.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="scooter" aria-label="Step">
+                        <img src="../images/icons/scooter.svg" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="bicycle" aria-label="Fiets">
+                        <img src="../images/icons/bycicle.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="boarding" aria-label="Stoepbord">
+                        <img src="../images/icons/boarding.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="barrier" aria-label="Werfbarriere">
+                        <img src="../images/icons/barrier.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="garbage" aria-label="Vuilniszakken">
+                        <img src="../images/icons/garbage-bag.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="charging" aria-label="Laadpaal">
+                        <img src="../images/icons/charging.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="terrace" aria-label="Terrasmeubilair">
+                        <img src="../images/icons/chair.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="street-lamp" aria-label="Straatlamp">
+                        <img src="../images/icons/street-lamp.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="ad-panel" aria-label="Reclamepaneel">
+                        <img src="../images/icons/panneau.svg" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="road-sign" aria-label="Verkeersbord">
+                        <img src="../images/icons/road-sign.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="trees" aria-label="Beplanting">
+                        <img src="../images/icons/trees.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="bollards" aria-label="Paaltjes">
+                        <img src="../images/icons/bollards.png" alt="">
+                    </button>
+                    <button class="obstacle-card" type="submit" name="obstacle" value="container" aria-label="Afvalcontainer">
+                        <img src="../images/icons/waste(1).png" alt="">
+                    </button>
+                    <button class="obstacle-card obstacle-card--more" type="submit" name="obstacle" value="other" aria-label="Ander obstakel">
+                        <span aria-hidden="true">...</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <a class="report__arrow report__arrow--next" href="photo.html" aria-label="Volgende stap">
+            <img src="../images/icons/arrow_next-button.svg" alt="" aria-hidden="true">
+        </a>
+    </main>
+</body>
+</html>
