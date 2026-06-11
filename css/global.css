@@ -11,3 +11,651 @@ body{
     min-height:100vh;
     line-height:1.5;
 }
+
+.bw-mode body{
+    background-color:#ffffff;
+    color:#000000;
+}
+
+.bw-mode .site-header{
+    background-color:#ffffff;
+}
+
+.bw-mode .nav{
+    width:min(100% - 2rem, 86rem);
+    padding:1.25rem 0;
+}
+
+.bw-mode .nav__logo-image{
+    filter:brightness(0);
+}
+
+.bw-mode .nav__link{
+    color:#000000;
+    font-size:1.45rem;
+}
+
+.bw-mode .nav__link--button,
+.bw-mode .mode-toggle,
+.bw-mode .hero__button,
+.bw-mode .photo-form__button,
+.bw-mode .details-form__button,
+.bw-mode .thanks-card__button{
+    border-radius:0.25rem;
+    background-color:#000000;
+    color:#ffffff;
+}
+
+.bw-mode .nav__link--button,
+.bw-mode .mode-toggle{
+    padding:0.9rem 1.25rem;
+    font-size:1.35rem;
+}
+
+.bw-mode .mode-toggle{
+    border:0.1rem solid #000000;
+}
+
+.bw-mode .hero{
+    background:#ffffff;
+}
+
+.bw-mode .hero__content{
+    display:block;
+    min-height:calc(100vh - 5rem);
+    padding:3.4rem 4rem 4rem;
+}
+
+.bw-mode .hero__copy{
+    width:min(100%, 56rem);
+    margin:0;
+}
+
+.bw-mode .hero__title{
+    color:#000000;
+    font-size:clamp(4.4rem, 8vw, 6.8rem);
+    line-height:1.04;
+}
+
+.bw-mode .hero__text{
+    max-width:52rem;
+    margin-top:1.35rem;
+    color:#000000;
+    font-size:1.85rem;
+    line-height:1.25;
+}
+
+.bw-mode .hero__button{
+    margin-top:3rem;
+    width:24rem;
+    height:4.6rem;
+    padding:0 1.75rem;
+    font-weight:800;
+    font-size:1.7rem;
+    line-height:1.1;
+    text-align:center;
+}
+
+.bw-mode .hero__media{
+    display:none;
+}
+
+.bw-mode .report,
+.bw-mode .report--photo,
+.bw-mode .report--details,
+.bw-mode .thanks-page{
+    background:#ffffff;
+}
+
+.bw-mode .report__decor,
+.bw-mode .thanks-page__line{
+    filter:grayscale(1);
+    opacity:0.18;
+}
+
+.bw-mode .obstacle-step__number,
+.bw-mode .obstacle-step__title,
+.bw-mode .photo-step__heading,
+.bw-mode .details-step__heading,
+.bw-mode .thanks-card{
+    color:#000000;
+}
+
+.bw-mode .obstacle-step__number{
+    font-size:3.15rem;
+}
+
+.bw-mode .obstacle-step__title{
+    font-size:1.55rem;
+}
+
+.bw-mode .obstacle-step{
+    width:min(100%, 68rem);
+}
+
+.bw-mode .obstacle-step__heading{
+    margin-bottom:1.8rem;
+}
+
+.bw-mode .obstacle-grid{
+    grid-template-columns:repeat(5, 7.4rem);
+    gap:3.4rem 6.2rem;
+}
+
+.bw-mode .obstacle-card{
+    border:0.12rem solid #000000;
+    background:#ffffff;
+    box-shadow:none;
+    width:7.4rem;
+    padding:1.35rem;
+}
+
+.bw-mode .obstacle-card img{
+    filter:grayscale(1) brightness(0);
+}
+
+.bw-mode .obstacle-card--more span{
+    color:#000000;
+    font-size:2.25rem;
+}
+
+.bw-mode .report__arrow{
+    background:#000000;
+    width:4.7rem;
+    height:14.5rem;
+}
+
+.bw-mode .report__arrow img{
+    filter:brightness(0) invert(1);
+    width:2.8rem;
+    height:2.8rem;
+}
+
+.bw-mode .photo-upload,
+.bw-mode .details-form__comment,
+.bw-mode .details-form__email{
+    border:0.12rem solid #000000;
+    background:#ffffff;
+    color:#000000;
+}
+
+.bw-mode .photo-upload__content{
+    color:#000000;
+    font-size:1.15rem;
+}
+
+.bw-mode .photo-upload__icon{
+    color:#000000;
+}
+
+.bw-mode .step-progress__item{
+    border:0.12rem solid #000000;
+    background:#ffffff;
+}
+
+.bw-mode .details-form__comment::placeholder,
+.bw-mode .details-form__email::placeholder{
+    color:#555555;
+}
+
+.bw-only{
+    display:none;
+}
+
+.bw-mode .bw-only{
+    display:inline;
+}
+
+.bw-mode .color-only{
+    display:none;
+}
+
+.step-indicator{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100vw;
+    margin:0 calc(50% - 50vw) 2rem;
+    padding-inline:max(1rem, calc((100vw - 36rem) / 2));
+    box-sizing:border-box;
+}
+
+.step-indicator__item{
+    position:relative;
+    z-index:1;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    width:4.6rem;
+    height:4.6rem;
+    border:0.18rem solid var(--color-yellow);
+    border-radius:50%;
+    background:var(--color-blue);
+    color:var(--color-yellow);
+    font-weight:800;
+    font-size:2.25rem;
+    line-height:1;
+}
+
+.step-indicator__item.is-complete{
+    background:var(--color-yellow);
+    color:var(--color-blue);
+}
+
+.step-indicator__item.is-active{
+    background:var(--color-orange);
+    color:var(--color-yellow);
+    box-shadow:0 0 0 0.22rem var(--color-yellow);
+}
+
+.step-indicator__line{
+    flex:1 1 4.5rem;
+    height:0.42rem;
+    margin:0 -0.1rem;
+    background:rgba(253, 226, 122, 0.32);
+}
+
+.step-indicator__line.is-complete{
+    background:var(--color-yellow);
+}
+
+.step-indicator__item--check::before{
+    width:1.8rem;
+    height:0.95rem;
+    border-bottom:0.45rem solid currentColor;
+    border-left:0.45rem solid currentColor;
+    content:"";
+    transform:translateY(-0.15rem) rotate(-45deg);
+}
+
+.bw-mode .step-indicator__item{
+    border-color:#000000;
+    background:#000000;
+    color:#ffffff;
+}
+
+.bw-mode .step-indicator__item.is-complete{
+    background:#ffffff;
+    color:#000000;
+}
+
+.bw-mode .step-indicator__item.is-active{
+    background:#d9d9d9;
+    color:#000000;
+    box-shadow:0 0 0 0.22rem #000000;
+}
+
+.bw-mode .step-indicator__line{
+    background:#9a9a9a;
+}
+
+.bw-mode .step-indicator__line.is-complete{
+    background:#000000;
+}
+
+.bw-mode .report--photo{
+    padding-top:0.6rem;
+}
+
+.bw-mode .photo-step{
+    width:min(100%, 30rem);
+}
+
+.bw-mode .photo-step__heading{
+    margin-bottom:1.2rem;
+    color:#000000;
+    text-align:center;
+}
+
+.bw-mode .photo-step__number{
+    font-size:3.15rem;
+    line-height:1;
+}
+
+.bw-mode .photo-step__title{
+    margin-top:0.35rem;
+    font-size:1.55rem;
+    line-height:1.08;
+}
+
+.bw-mode .photo-upload{
+    width:28rem;
+    border:0.15rem solid #000000;
+    background:#e9e9e9;
+}
+
+.bw-mode .photo-upload__content{
+    font-size:1.35rem;
+    line-height:1.08;
+}
+
+.bw-mode .photo-upload__icon{
+    width:5rem;
+    height:5rem;
+    margin-bottom:0.65rem;
+}
+
+.bw-mode .photo-form__button{
+    width:24rem;
+    height:4.6rem;
+    margin-top:1.85rem;
+    padding:0 1.75rem;
+    font-size:1.7rem;
+    line-height:1.1;
+}
+
+.bw-mode .step-progress{
+    gap:1.7rem;
+    margin-top:2.15rem;
+}
+
+.bw-mode .step-progress__item{
+    width:4rem;
+    border:0.15rem solid #000000;
+}
+
+.bw-mode .report--details{
+    justify-content:center;
+    padding-top:0.6rem;
+    padding-left:8.5rem;
+}
+
+.bw-mode .details-form{
+    width:30rem;
+}
+
+.bw-mode .details-step__heading{
+    margin-bottom:0.85rem;
+    color:#000000;
+}
+
+.bw-mode .details-step__number{
+    font-size:3.15rem;
+    line-height:1;
+}
+
+.bw-mode .details-step__title{
+    margin-top:0.35rem;
+    font-size:1.55rem;
+    line-height:1.12;
+}
+
+.bw-mode .details-form__comment{
+    height:13.5rem;
+    padding:1rem 1.15rem;
+    border:0.15rem solid #000000;
+    font-size:1.15rem;
+}
+
+.bw-mode .details-step--contact{
+    margin-top:2.45rem;
+}
+
+.bw-mode .details-form__email{
+    height:3.2rem;
+    padding:0 1.15rem;
+    border:0.1rem solid #cfcfcf;
+    font-size:1.15rem;
+}
+
+.bw-mode .details-form__button{
+    width:24rem;
+    height:4.6rem;
+    margin-top:2.65rem;
+    padding:0 1.75rem;
+    font-size:1.7rem;
+    line-height:1.1;
+}
+
+.bw-mode .thanks-page{
+    padding-top:3.2rem;
+    background:#ffffff;
+}
+
+.bw-mode .thanks-page__line{
+    bottom:-10rem;
+    width:min(31rem, 48vw);
+    filter:grayscale(1);
+    opacity:0.12;
+    transform:translateX(-50%) rotate(86deg);
+}
+
+.bw-mode .thanks-card{
+    width:34rem;
+    color:#000000;
+}
+
+.bw-mode .thanks-card__check--color{
+    display:none;
+}
+
+.bw-mode .thanks-card__check--bw{
+    display:block;
+    width:10rem;
+    height:10rem;
+    margin:0 auto 1rem;
+}
+
+.bw-mode .thanks-card__title{
+    font-size:5.6rem;
+    line-height:0.95;
+}
+
+.bw-mode .thanks-card__text{
+    margin-top:0.55rem;
+    font-size:2.35rem;
+    line-height:1.08;
+}
+
+.bw-mode .thanks-card__button{
+    width:27rem;
+    aspect-ratio:1.25;
+    margin-top:3rem;
+    background:#000000;
+    color:#ffffff;
+    font-weight:400;
+    font-size:2.25rem;
+    line-height:1.1;
+}
+
+@media (max-width:40rem){
+    .bw-mode .hero__content{
+        padding:2rem 1rem 3rem;
+    }
+
+    .bw-mode .hero__title{
+        font-size:3.2rem;
+    }
+
+    .bw-mode .hero__button{
+        display:block;
+        width:max-content;
+        max-width:calc(100vw - 4rem);
+        margin-right:auto;
+        margin-left:auto;
+        text-align:center;
+    }
+
+    .bw-mode .hero__feature-icon--color{
+        display:none;
+    }
+
+    .bw-mode .hero__feature-icon--bw{
+        display:block;
+    }
+
+    .bw-mode .nav__list{
+        border-color:#000000;
+        background:#ffffff;
+        box-shadow:0 0.45rem 0.9rem rgba(0, 0, 0, 0.2);
+        min-width:17rem;
+        gap:0.9rem;
+        padding:1rem;
+    }
+
+    .bw-mode .nav__link{
+        color:#000000;
+        padding:0.85rem 1rem;
+        font-size:1.75rem;
+        line-height:1.05;
+    }
+
+    .bw-mode .nav__link--button{
+        background:#000000;
+        color:#ffffff;
+        text-align:center;
+    }
+
+    .bw-mode .mode-toggle{
+        background:#000000;
+        color:#ffffff;
+        padding:0.85rem 1rem;
+        font-size:1.75rem;
+        line-height:1.05;
+        text-align:center;
+    }
+
+    .bw-mode .nav__menu-button{
+        background:#dddddd;
+    }
+
+    .step-indicator{
+        width:100vw;
+        padding-inline:max(1rem, calc((100vw - 20rem) / 2));
+        margin-bottom:1.25rem;
+    }
+
+    .step-indicator__item{
+        width:3.2rem;
+        height:3.2rem;
+        border-width:0.14rem;
+        font-size:1.55rem;
+    }
+
+    .step-indicator__line{
+        flex-basis:2.2rem;
+        height:0.25rem;
+    }
+
+    .step-indicator__item--check::before{
+        width:1.25rem;
+        height:0.65rem;
+        border-bottom-width:0.32rem;
+        border-left-width:0.32rem;
+    }
+
+    .bw-mode .photo-step,
+    .bw-mode .details-form{
+        width:min(100%, 24rem);
+    }
+
+    .bw-mode .report--details{
+        align-items:center;
+        padding:1rem 1rem 7rem;
+    }
+
+    .bw-mode .details-form{
+        margin:0 auto;
+    }
+
+    .bw-mode .photo-upload{
+        width:min(24rem, 86vw);
+    }
+
+    .bw-mode .details-step__number,
+    .bw-mode .photo-step__number{
+        font-size:2.1rem;
+    }
+
+    .bw-mode .obstacle-step__number{
+        font-size:2.1rem;
+    }
+
+    .bw-mode .obstacle-step__title,
+    .bw-mode .details-step__title{
+        font-size:1.2rem;
+    }
+
+    .bw-mode .obstacle-grid{
+        grid-template-columns:repeat(2, 7.4rem);
+        justify-content:center;
+        gap:1.2rem;
+    }
+
+    .bw-mode .obstacle-card{
+        width:7.4rem;
+        max-width:none;
+        padding:0.8rem;
+    }
+
+    .bw-mode .obstacle-card img{
+        max-width:100%;
+        max-height:100%;
+    }
+
+    .bw-mode .report__arrow{
+        width:3.55rem;
+        height:3.55rem;
+        border-radius:50%;
+    }
+
+    .bw-mode .report__arrow img{
+        width:2.2rem;
+        height:2.2rem;
+    }
+
+    .bw-mode .photo-step__title{
+        font-size:1.2rem;
+    }
+
+    .bw-mode .photo-upload__content{
+        font-size:1rem;
+    }
+
+    .bw-mode .photo-upload__icon{
+        width:3.5rem;
+        height:3.5rem;
+    }
+
+    .bw-mode .photo-form__button{
+        width:min(19rem, 78vw);
+        margin-top:1.7rem;
+        font-size:1.45rem;
+    }
+
+    .bw-mode .step-progress__item{
+        width:3rem;
+    }
+
+    .bw-mode .thanks-page__line{
+        bottom:-5rem;
+        width:min(22rem, 78vw);
+    }
+
+    .bw-mode .thanks-card__check--color{
+        display:none;
+    }
+
+    .bw-mode .thanks-card__check--bw{
+        display:block;
+        width:6.35rem;
+        height:6.35rem;
+        margin:0 auto 0.9rem;
+        background:transparent;
+    }
+
+    .bw-mode .thanks-card__title{
+        font-size:2.7rem;
+    }
+
+    .bw-mode .thanks-card__text{
+        font-size:1.25rem;
+    }
+
+    .bw-mode .thanks-card__button{
+        width:min(18rem, 78vw);
+        margin-top:2.25rem;
+        font-size:1.25rem;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto toevoegen | Walk Brussels</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/mode-toggle.js" defer></script>
+    <script src="../js/photo-preview.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="nav__logo" href="../index.html">
+                <img class="nav__logo-image" src="../images/icons/walkyellow.png" alt="Walk Brussels">
+            </a>
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--button" href="obstacle.html">Meld een obstakel</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="report report--photo">
+        <a class="report__arrow report__arrow--previous" href="obstacle.html" aria-label="Vorige stap">
+            <img src="../images/icons/arrow_next-button.svg" alt="" aria-hidden="true">
+        </a>
+
+        <section class="photo-step" aria-labelledby="photo-title">
+            <div class="step-indicator" aria-label="Voortgang">
+                <span class="step-indicator__item is-complete">1</span>
+                <span class="step-indicator__line is-complete"></span>
+                <span class="step-indicator__item is-active">2</span>
+                <span class="step-indicator__line"></span>
+                <span class="step-indicator__item">3</span>
+                <span class="step-indicator__line"></span>
+                <span class="step-indicator__item step-indicator__item--check" aria-label="Klaar"></span>
+            </div>
+
+            <div class="photo-step__heading">
+                <p class="photo-step__number">2. Foto toevoegen<span class="bw-only">*</span></p>
+                <h1 class="photo-step__title" id="photo-title">Maak een duidelijke foto<br>van de obstakels.</h1>
+            </div>
+
+            <form class="photo-form" action="info.html">
+                <label class="photo-upload" for="obstacle-photo">
+                    <input class="photo-upload__input" id="obstacle-photo" name="photo" type="file" accept="image/*" multiple>
+                    <span class="photo-upload__content">
+                        <svg class="photo-upload__icon" viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M21 22h-6a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h34a6 6 0 0 0 6-6V28a6 6 0 0 0-6-6h-6l-4-8H25l-4 8Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <circle cx="32" cy="38" r="10" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path d="M45 30h3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span>Klik om een foto<br>te uploaden</span>
+                    </span>
+                </label>
+
+                <button class="photo-form__button" type="submit">Uploaden</button>
+            </form>
+
+            <ol class="step-progress" aria-label="Voortgang">
+                <li class="step-progress__item" aria-label="Foto preview 1"></li>
+                <li class="step-progress__item step-progress__item--current" aria-label="Foto preview 2"></li>
+                <li class="step-progress__item" aria-label="Foto preview 3"></li>
+                <li class="step-progress__item" aria-label="Foto preview 4"></li>
+            </ol>
+        </section>
+
+        <a class="report__arrow report__arrow--next" href="info.html" aria-label="Volgende stap">
+            <img src="../images/icons/arrow_next-button.svg" alt="" aria-hidden="true">
+        </a>
+    </main>
+</body>
+</html>

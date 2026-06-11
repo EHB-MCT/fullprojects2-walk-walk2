@@ -45,14 +45,117 @@
     color:var(--color-white);
 }
 
+.mode-toggle{
+    display:inline-block;
+    padding:0.65rem 1rem;
+    border:0;
+    border-radius:0.5rem;
+    background-color:var(--color-yellow);
+    color:var(--color-blue);
+    font:inherit;
+    cursor:pointer;
+}
+
+.mode-toggle:hover,
+.mode-toggle:focus-visible{
+    outline:0.2rem solid var(--color-white);
+    outline-offset:0.2rem;
+}
+
+.nav__menu-button{
+    display:none;
+}
+
 @media (max-width:40rem){
     .nav{
-        align-items:flex-start;
-        flex-direction:column;
+        position:relative;
+        align-items:center;
+        flex-direction:row;
+        gap:1rem;
+        width:100%;
+        padding:1.05rem 1.45rem 0.85rem;
+        border-bottom:0.0625rem solid rgba(0, 0, 0, 0.42);
     }
 
     .nav__list{
-        align-items:flex-start;
+        position:absolute;
+        top:100%;
+        right:1rem;
+        z-index:10;
+        display:none;
+        align-items:stretch;
         flex-direction:column;
+        gap:0.65rem;
+        min-width:12rem;
+        margin-left:0;
+        padding:0.85rem;
+        border:0.0625rem solid rgba(253, 226, 122, 0.35);
+        border-radius:0.25rem;
+        background:var(--color-blue);
+        box-shadow:0 0.6rem 1.2rem rgba(0, 0, 0, 0.22);
+    }
+
+    .nav--open .nav__list{
+        display:flex;
+    }
+
+    .nav__logo-image{
+        height:1.9rem;
+        padding:0;
+    }
+
+    .nav__link{
+        display:block;
+        padding:0.55rem 0.65rem;
+        color:var(--color-yellow);
+        font-size:1rem;
+        line-height:1;
+        white-space:nowrap;
+    }
+
+    .nav__link--button{
+        padding:0.55rem 0.65rem;
+        border-radius:0;
+        background-color:transparent;
+        color:var(--color-yellow);
+        text-align:center;
+    }
+
+    .mode-toggle{
+        display:block;
+        width:100%;
+        padding:0.65rem;
+        border-radius:0.2rem;
+        background:var(--color-yellow);
+        color:var(--color-blue);
+        text-align:center;
+    }
+
+    .nav__menu-button{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        gap:0.32rem;
+        width:3.25rem;
+        height:3.25rem;
+        margin-left:auto;
+        border:0;
+        border-radius:0;
+        background:#dddddd;
+        cursor:pointer;
+    }
+
+    .nav__menu-button span{
+        display:block;
+        width:1.35rem;
+        height:0.16rem;
+        border-radius:999rem;
+        background:#000000;
+    }
+
+    .nav__menu-button:focus-visible{
+        outline:0.2rem solid var(--color-yellow);
+        outline-offset:0.15rem;
     }
 }

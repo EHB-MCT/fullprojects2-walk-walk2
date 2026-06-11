@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentaar | Walk Brussels</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/mode-toggle.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="nav__logo" href="../index.html">
+                <img class="nav__logo-image" src="../images/icons/walkyellow.png" alt="Walk Brussels">
+            </a>
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--button" href="obstacle.html">Meld een obstakel</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="report report--details">
+        <a class="report__arrow report__arrow--previous" href="photo.html" aria-label="Vorige stap">
+            <img src="../images/icons/arrow_next-button.svg" alt="" aria-hidden="true">
+        </a>
+
+        <form class="details-form" action="thanks.html">
+            <div class="step-indicator" aria-label="Voortgang">
+                <span class="step-indicator__item is-complete">1</span>
+                <span class="step-indicator__line is-complete"></span>
+                <span class="step-indicator__item is-complete">2</span>
+                <span class="step-indicator__line is-complete"></span>
+                <span class="step-indicator__item is-active">3</span>
+                <span class="step-indicator__line"></span>
+                <span class="step-indicator__item step-indicator__item--check" aria-label="Klaar"></span>
+            </div>
+
+            <section class="details-step" aria-labelledby="comment-title">
+                <div class="details-step__heading">
+                    <p class="details-step__number">3. Commentaar <span class="color-only">(optioneel)</span></p>
+                    <h1 class="details-step__title" id="comment-title">Indien nodig, geef extra informatie<br>over het probleem.</h1>
+                </div>
+
+                <label class="sr-only" for="comment">Beschrijf kort het probleem</label>
+                <textarea class="details-form__comment" id="comment" name="comment" placeholder="Beschrijf kort het probleem..."></textarea>
+            </section>
+
+            <section class="details-step details-step--contact" aria-labelledby="contact-title">
+                <div class="details-step__heading">
+                    <p class="details-step__number">4. Jouw gegevens <span class="color-only">(optioneel)</span></p>
+                    <h2 class="details-step__title" id="contact-title">Laat je gegevens achter voor<br>opvolging.</h2>
+                </div>
+
+                <label class="sr-only" for="email">E-mailadres</label>
+                <input class="details-form__email" id="email" name="email" type="email" placeholder="E-mail adres">
+            </section>
+
+            <button class="details-form__button" type="submit">Verstuur melding</button>
+        </form>
+    </main>
+</body>
+</html>
