@@ -357,6 +357,27 @@
     padding:0 1.25rem;
 }
 
+.details-form__newsletter{
+    display:flex;
+    align-items:flex-start;
+    gap:0.55rem;
+    margin-top:0.7rem;
+    color:var(--color-yellow);
+    font-weight:800;
+    font-size:0.9rem;
+    line-height:1.15;
+    cursor:pointer;
+}
+
+.details-form__newsletter-input{
+    flex:0 0 auto;
+    width:0.9rem;
+    height:0.9rem;
+    margin:0.1rem 0 0;
+    accent-color:var(--color-orange);
+    cursor:pointer;
+}
+
 .details-form__button{
     display:grid;
     place-items:center;
@@ -377,7 +398,8 @@
 .details-form__button:hover,
 .details-form__button:focus-visible,
 .details-form__comment:focus,
-.details-form__email:focus{
+.details-form__email:focus,
+.details-form__newsletter-input:focus-visible{
     outline:0.2rem solid var(--color-yellow);
     outline-offset:0.2rem;
 }

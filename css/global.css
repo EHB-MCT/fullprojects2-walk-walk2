@@ -179,6 +179,14 @@ body{
     color:#000000;
 }
 
+.bw-mode .details-form__newsletter{
+    color:#000000;
+}
+
+.bw-mode .details-form__newsletter-input{
+    accent-color:#000000;
+}
+
 .bw-mode .photo-upload__content{
     color:#000000;
     font-size:1.15rem;
@@ -267,6 +275,31 @@ body{
     border-left:0.45rem solid currentColor;
     content:"";
     transform:translateY(-0.15rem) rotate(-45deg);
+}
+
+@media (min-width:40.0625rem){
+    html:not(.bw-mode) .step-indicator{
+        margin-bottom:1.7rem;
+        padding-inline:max(1rem, calc((100vw - 32rem) / 2));
+    }
+
+    html:not(.bw-mode) .step-indicator__item{
+        width:4rem;
+        height:4rem;
+        font-size:2rem;
+    }
+
+    html:not(.bw-mode) .step-indicator__line{
+        flex-basis:3.8rem;
+        height:0.36rem;
+    }
+
+    html:not(.bw-mode) .step-indicator__item--check::before{
+        width:1.55rem;
+        height:0.82rem;
+        border-bottom-width:0.38rem;
+        border-left-width:0.38rem;
+    }
 }
 
 .bw-mode .step-indicator__item{
@@ -397,6 +430,19 @@ body{
     padding:0 1.15rem;
     border:0.1rem solid #cfcfcf;
     font-size:1.15rem;
+}
+
+.bw-mode .details-form__newsletter{
+    gap:0.75rem;
+    margin-top:0.85rem;
+    font-size:1.15rem;
+    line-height:1.18;
+}
+
+.bw-mode .details-form__newsletter-input{
+    width:1.15rem;
+    height:1.15rem;
+    margin-top:0.1rem;
 }
 
 .bw-mode .details-form__button{
@@ -619,7 +665,7 @@ body{
     }
 
     .bw-mode .photo-form__button{
-        width:min(19rem, 78vw);
+        width:min(19rem, 78%);
         margin-top:1.7rem;
         font-size:1.45rem;
     }
@@ -654,7 +700,7 @@ body{
     }
 
     .bw-mode .thanks-card__button{
-        width:min(18rem, 78vw);
+        width:min(18rem, 78%);
         margin-top:2.25rem;
         font-size:1.25rem;
     }
