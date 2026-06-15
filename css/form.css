@@ -167,11 +167,12 @@
 .photo-step{
     position:relative;
     z-index:1;
-    width:min(100%, 20rem);
+    width:min(100%, 44rem);
 }
 
 .photo-step__heading{
     margin-bottom:1.35rem;
+    text-align:center;
     color:var(--color-yellow);
 }
 
@@ -189,9 +190,10 @@
 }
 
 .photo-form{
-    display:flex;
-    flex-direction:column;
+    display:grid;
+    grid-template-columns:20rem 1fr;
     align-items:center;
+    gap:3.4rem;
 }
 
 .photo-upload{
@@ -243,7 +245,6 @@
 .photo-form__button{
     width:16rem;
     height:3.4rem;
-    margin-top:1.45rem;
     padding:0 1rem;
     border:0;
     border-radius:0.35rem;
@@ -253,6 +254,12 @@
     font-weight:800;
     line-height:1;
     cursor:pointer;
+}
+
+.photo-form__actions{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .photo-form__button:hover,
@@ -265,7 +272,7 @@
     display:flex;
     justify-content:center;
     gap:1.55rem;
-    margin-top:2.35rem;
+    margin-top:1.6rem;
     list-style:none;
 }
 
@@ -326,7 +333,8 @@
 }
 
 .details-form__comment,
-.details-form__email{
+.details-form__email,
+.details-form__name{
     width:100%;
     border:0;
     border-radius:0.15rem;
@@ -337,7 +345,8 @@
 }
 
 .details-form__comment::placeholder,
-.details-form__email::placeholder{
+.details-form__email::placeholder,
+.details-form__name::placeholder{
     color:#8d8d8d;
     opacity:1;
 }
@@ -352,9 +361,14 @@
     margin-top:2.4rem;
 }
 
-.details-form__email{
+.details-form__email,
+.details-form__name{
     height:2.85rem;
     padding:0 1.25rem;
+}
+
+.details-form__name{
+    margin-top:0.7rem;
 }
 
 .details-form__newsletter{
@@ -399,6 +413,7 @@
 .details-form__button:focus-visible,
 .details-form__comment:focus,
 .details-form__email:focus,
+.details-form__name:focus,
 .details-form__newsletter-input:focus-visible{
     outline:0.2rem solid var(--color-yellow);
     outline-offset:0.2rem;
@@ -593,6 +608,17 @@
 
     .photo-step{
         width:min(100%, 22rem);
+    }
+
+    .photo-step__heading{
+        text-align:left;
+    }
+
+    .photo-form{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:0;
     }
 
     .photo-upload{

@@ -173,7 +173,8 @@ body{
 
 .bw-mode .photo-upload,
 .bw-mode .details-form__comment,
-.bw-mode .details-form__email{
+.bw-mode .details-form__email,
+.bw-mode .details-form__name{
     border:0.12rem solid #000000;
     background:#ffffff;
     color:#000000;
@@ -202,7 +203,8 @@ body{
 }
 
 .bw-mode .details-form__comment::placeholder,
-.bw-mode .details-form__email::placeholder{
+.bw-mode .details-form__email::placeholder,
+.bw-mode .details-form__name::placeholder{
     color:#555555;
 }
 
@@ -300,6 +302,11 @@ body{
         border-bottom-width:0.38rem;
         border-left-width:0.38rem;
     }
+
+    .bw-mode .photo-form{
+        grid-template-columns:24rem 22rem;
+        gap:3rem;
+    }
 }
 
 .bw-mode .step-indicator__item{
@@ -332,7 +339,7 @@ body{
 }
 
 .bw-mode .photo-step{
-    width:min(100%, 30rem);
+    width:min(100%, 51rem);
 }
 
 .bw-mode .photo-step__heading{
@@ -353,7 +360,7 @@ body{
 }
 
 .bw-mode .photo-upload{
-    width:28rem;
+    width:24rem;
     border:0.15rem solid #000000;
     background:#e9e9e9;
 }
@@ -364,27 +371,26 @@ body{
 }
 
 .bw-mode .photo-upload__icon{
-    width:5rem;
-    height:5rem;
-    margin-bottom:0.65rem;
+    width:4rem;
+    height:4rem;
+    margin-bottom:0.5rem;
 }
 
 .bw-mode .photo-form__button{
-    width:24rem;
-    height:4.6rem;
-    margin-top:1.85rem;
-    padding:0 1.75rem;
-    font-size:1.7rem;
+    width:22rem;
+    height:4.15rem;
+    padding:0 1rem;
+    font-size:1.65rem;
     line-height:1.1;
 }
 
 .bw-mode .step-progress{
-    gap:1.7rem;
-    margin-top:2.15rem;
+    gap:1.35rem;
+    margin-top:1.6rem;
 }
 
 .bw-mode .step-progress__item{
-    width:4rem;
+    width:3.55rem;
     border:0.15rem solid #000000;
 }
 
@@ -425,7 +431,8 @@ body{
     margin-top:2.45rem;
 }
 
-.bw-mode .details-form__email{
+.bw-mode .details-form__email,
+.bw-mode .details-form__name{
     height:3.2rem;
     padding:0 1.15rem;
     border:0.1rem solid #cfcfcf;
