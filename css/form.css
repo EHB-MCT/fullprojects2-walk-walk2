@@ -155,10 +155,6 @@
     right:2.6rem;
 }
 
-.report__arrow--next img{
-    transform:rotate(0deg);
-}
-
 .report--photo{
     align-items:flex-start;
     padding-top:0.9rem;
@@ -221,7 +217,6 @@
     padding:0;
     border:0;
     overflow:hidden;
-    clip:rect(0 0 0 0);
     white-space:nowrap;
 }
 
@@ -298,7 +293,6 @@
     padding:0;
     border:0;
     overflow:hidden;
-    clip:rect(0 0 0 0);
     white-space:nowrap;
 }
 

@@ -138,7 +138,7 @@ body{
 }
 
 .bw-mode .obstacle-grid{
-    grid-template-columns:repeat(5, 7.4rem);
+    grid-template-columns:repeat(3, 7.4rem);
     gap:3.4rem 6.2rem;
 }
 
