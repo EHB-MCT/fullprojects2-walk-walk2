@@ -5,8 +5,8 @@
 }
 
 .hero__content{
-    display:grid;
-    grid-template-columns:minmax(0, 1fr) 50vw;
+    display:grid; /* Verdeelt de hero in tekst links en beeld rechts */
+    grid-template-columns:minmax(0, 1fr) 50vw; /* Geeft de foto de helft van het scherm */
     align-items:center;
     width:100%;
     min-height:calc(100vh - 5rem);
@@ -40,7 +40,7 @@
 
 .hero__button{
     display:inline-grid;
-    place-items:center;
+    place-items:center; /* Centreert de knoptekst mooi in de knop */
     width:16rem;
     height:3.4rem;
     margin-top:2.4rem;
@@ -62,24 +62,24 @@
 }
 
 .hero__media{
-    position:relative;
-    height:calc(100vh - 5rem);
-    overflow:hidden;
+    position:relative; /* Nodig voor de donkere laag bovenop de foto */
+    height:calc(100vh - 5rem); /* vh = % */
+    overflow:hidden; /* Verbergt delen van de foto die buiten het kader vallen */
 }
 
 .hero__media::before{
-    position:absolute;
+    position:absolute; /* Legt de gradient bovenop de foto */
     inset:0;
-    z-index:1;
+    z-index:1; /* Zet de gradient boven de foto */
     background:linear-gradient(90deg, var(--color-blue) 0%, rgba(37, 35, 79, 0.75) 18%, rgba(37, 35, 79, 0) 48%);
-    content:"";
+    content:""; /* Maakt het pseudo-element zichtbaar */
 }
 
 .hero__image{
     display:block;
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:cover; /* Vult het beeldvlak zonder de foto uit verhouding te trekken */
 }
 
 .hero__image--bw{
@@ -96,8 +96,8 @@
 
 @media (min-width:40.0625rem){
     .bw-mode .hero__content{
-        display:grid;
-        grid-template-columns:minmax(0, 1fr) 50vw;
+        display:grid; /* Behoudt dezelfde desktopindeling in zwart-wit */
+        grid-template-columns:minmax(0, 1fr) 50vw; /* Laat tekst en beeld naast elkaar staan */
         align-items:center;
         padding:0;
     }
@@ -118,7 +118,7 @@
     }
 
     .bw-mode .hero__image{
-        object-position:center center;
+        object-position:center center; /* Zet het belangrijkste deel van de foto in het midden */
     }
 }
 
@@ -129,14 +129,14 @@
     }
 
     .hero__content{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr; /* Zet de hero op mobiel in één kolom */
         gap:0;
         min-height:auto;
         padding-top:1.2rem;
     }
 
     .hero__copy{
-        display:contents;
+        display:contents; /* Laat de kinderen meedoen in de grid zonder extra wrapper */
         width:min(100% - 2rem, 44rem);
         margin:0 auto;
         padding-left:0;
@@ -145,7 +145,7 @@
 
     .hero__title{
         order:1;
-        width:min(100%, 17.5rem);
+        width:min(100%, 17.5rem);/* Neemt de kleinste van deze twee breedtes zodat het element nooit breder wordt dan 17.5rem */
         margin:0 auto;
         font-size:2rem;
         line-height:1.22;
@@ -172,7 +172,7 @@
     }
 
     .hero__image{
-        object-position:center bottom;
+        object-position:center bottom; /* Toont vooral de onderkant van de foto op mobiel */
     }
 
     .hero__text{
@@ -204,8 +204,8 @@
     }
 
     .hero__features{
-        display:grid;
-        grid-template-columns:repeat(3, minmax(0, 1fr));
+        display:grid; /* Zet de drie voordelen naast elkaar */
+        grid-template-columns:repeat(3, minmax(0, 1fr)); /* Maakt drie gelijke kolommen */
         order:4;
         width:min(100% - 2rem, 22rem);
         margin:2.45rem auto 1.4rem;
@@ -214,7 +214,7 @@
     .hero__feature{
         display:flex;
         align-items:center;
-        flex-direction:column;
+        flex-direction:column; /* Zet icoon boven tekst */
         min-width:0;
         padding:0 0.45rem;
         text-align:center;
@@ -227,7 +227,7 @@
     .hero__feature img{
         width:4.2rem;
         height:4.2rem;
-        object-fit:contain;
+        object-fit:contain; /* Zorgt dat het hele icoon zichtbaar blijft */
     }
 
     .hero__feature img.hero__feature-icon--bw{
@@ -253,8 +253,8 @@
     }
 
     .bw-mode .hero__content{
-        display:grid;
-        grid-template-columns:1fr;
+        display:grid; /* Zet alles in zwart-wit mobiel in één kolom */
+        grid-template-columns:1fr; /* Maakt één kolom voor mobiele layout */
         min-height:auto;
         padding:1.65rem 1rem 2.4rem;
     }
@@ -308,7 +308,7 @@
     }
 
     .bw-mode .hero__features{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
+        grid-template-columns:repeat(2, minmax(0, 1fr)); /* Zet de voordelen in twee kolommen */
         width:min(100%, 21rem);
         margin:2.25rem auto 0;
         row-gap:1.7rem;
@@ -319,7 +319,7 @@
     }
 
     .bw-mode .hero__feature:nth-child(3){
-        grid-column:1 / -1;
+        grid-column:1 / -1; /* Laat het derde item over de volledige breedte lopen */
         width:12rem;
         justify-self:center;
     }

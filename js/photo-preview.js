@@ -1,5 +1,5 @@
 (function () {
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () { // Wacht tot de uploadknop en previewvakjes bestaan
         var input = document.querySelector(".photo-upload__input");
         var slots = Array.prototype.slice.call(document.querySelectorAll(".step-progress__item"));
 
@@ -9,6 +9,7 @@
 
         var selectedFiles = [];
 
+        // Tekent de gekozen foto's opnieuw in de previewvakjes.
         function renderPreviews() {
             slots.forEach(function (slot) {
                 slot.innerHTML = "";
@@ -18,9 +19,9 @@
                 var image = document.createElement("img");
                 image.className = "step-progress__preview";
                 image.alt = "Geselecteerde foto " + (index + 1);
-                image.src = URL.createObjectURL(file);
+                image.src = URL.createObjectURL(file); // Maakt tijdelijk een link zodat de gekozen foto zichtbaar wordt
 
-                image.addEventListener("load", function () {
+                image.addEventListener("load", function () { // Ruimt de tijdelijke fotolink op nadat de preview geladen is
                     URL.revokeObjectURL(image.src);
                 }, { once:true });
 
@@ -28,7 +29,7 @@
             });
         }
 
-        input.addEventListener("change", function () {
+        input.addEventListener("change", function () { // Reageert wanneer de gebruiker foto's kiest
             var files = Array.prototype.slice.call(input.files).filter(function (file) {
                 return file.type.indexOf("image/") === 0;
             });

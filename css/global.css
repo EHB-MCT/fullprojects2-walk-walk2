@@ -27,7 +27,7 @@ body{
 }
 
 .bw-mode .nav__logo-image{
-    filter:brightness(0);
+    filter:brightness(0); /* Maakt het logo zwart in zwart-witmodus */
 }
 
 .bw-mode .nav__link{
@@ -109,7 +109,7 @@ body{
 
 .bw-mode .report__decor,
 .bw-mode .thanks-page__line{
-    filter:grayscale(1);
+    filter:grayscale(1); /* Haalt de kleuren uit de decoratie */
     opacity:0.18;
 }
 
@@ -138,7 +138,7 @@ body{
 }
 
 .bw-mode .obstacle-grid{
-    grid-template-columns:repeat(3, 7.4rem);
+    grid-template-columns:repeat(3, 7.4rem); /* Zet de obstakels in drie kolommen in zwart-wit */
     gap:3.4rem 6.2rem;
 }
 
@@ -151,7 +151,7 @@ body{
 }
 
 .bw-mode .obstacle-card img{
-    filter:grayscale(1) brightness(0);
+    filter:grayscale(1) brightness(0); /* Maakt de iconen zwart */
 }
 
 .bw-mode .obstacle-card--more span{
@@ -166,7 +166,7 @@ body{
 }
 
 .bw-mode .report__arrow img{
-    filter:brightness(0) invert(1);
+    filter:brightness(0) invert(1); /* Maakt het pijlicoon wit */
     width:2.8rem;
     height:2.8rem;
 }
@@ -221,8 +221,8 @@ body{
 }
 
 .step-indicator{
-    position:relative;
-    display:flex;
+    position:relative; /* Houdt de bolletjes en lijnen samen als één blok */
+    display:flex; /* Zet de voortgangsbolletjes en lijnen naast elkaar */
     align-items:center;
     justify-content:center;
     width:100vw;
@@ -232,11 +232,11 @@ body{
 }
 
 .step-indicator__item{
-    position:relative;
-    z-index:1;
-    display:grid;
-    place-items:center;
-    flex:0 0 auto;
+    position:relative; /* Zorgt dat het bolletje boven de lijn kan blijven */
+    z-index:1; /* Zet het bolletje voor de lijn */
+    display:grid; /* Maakt het makkelijk om het cijfer te centreren */
+    place-items:center; /* Centreert het cijfer in het bolletje */
+    flex:0 0 auto; /* Zorgt dat het bolletje niet krimpt */
     width:4.6rem;
     height:4.6rem;
     border:0.18rem solid var(--color-yellow);
@@ -260,7 +260,7 @@ body{
 }
 
 .step-indicator__line{
-    flex:1 1 4.5rem;
+    flex:1 1 4.5rem; /* Laat de lijn flexibel de ruimte tussen bolletjes vullen */
     height:0.42rem;
     margin:0 -0.1rem;
     background:rgba(253, 226, 122, 0.32);
@@ -275,8 +275,8 @@ body{
     height:0.95rem;
     border-bottom:0.45rem solid currentColor;
     border-left:0.45rem solid currentColor;
-    content:"";
-    transform:translateY(-0.15rem) rotate(-45deg);
+    content:""; /* Maakt het vinkje zichtbaar als pseudo-element */
+    transform:translateY(-0.15rem) rotate(-45deg); /* Draait de lijnen zodat ze een vinkje vormen */
 }
 
 @media (min-width:40.0625rem){
@@ -304,7 +304,7 @@ body{
     }
 
     .bw-mode .photo-form{
-        grid-template-columns:24rem 22rem;
+        grid-template-columns:24rem 22rem; /* Zet uploadvak links en acties rechts */
         gap:3rem;
     }
 }
@@ -469,9 +469,9 @@ body{
 .bw-mode .thanks-page__line{
     bottom:-10rem;
     width:min(31rem, 48vw);
-    filter:grayscale(1);
+    filter:grayscale(1); /* Maakt de lijn zwart-wit */
     opacity:0.12;
-    transform:translateX(-50%) rotate(86deg);
+    transform:translateX(-50%) rotate(86deg); /* Centreert en draait de lijn op de bedankpagina */
 }
 
 .bw-mode .thanks-card{
@@ -631,7 +631,7 @@ body{
     }
 
     .bw-mode .obstacle-grid{
-        grid-template-columns:repeat(2, 7.4rem);
+        grid-template-columns:repeat(2, 7.4rem); /* Zet de obstakels op mobiel in twee kolommen */
         justify-content:center;
         gap:1.2rem;
     }
