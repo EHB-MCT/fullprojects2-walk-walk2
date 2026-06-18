@@ -45,7 +45,8 @@
     color:var(--color-white);
 }
 
-.mode-toggle{
+.mode-toggle,
+.language-toggle{
     display:inline-block;
     padding:0.65rem 1rem;
     border:0;
@@ -57,9 +58,16 @@
 }
 
 .mode-toggle:hover,
-.mode-toggle:focus-visible{
+.mode-toggle:focus-visible,
+.language-toggle:hover,
+.language-toggle:focus-visible{
     outline:0.2rem solid var(--color-white);
     outline-offset:0.2rem;
+}
+
+.language-toggle{
+    min-width:3.4rem;
+    font-weight:800;
 }
 
 .nav__menu-button{
@@ -121,7 +129,8 @@
         text-align:center;
     }
 
-    .mode-toggle{
+    .mode-toggle,
+    .language-toggle{
         display:block;
         width:100%;
         padding:0.65rem;

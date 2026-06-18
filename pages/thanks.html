@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" href="../images/icons/Fav.png" type="image/png">
     <script src="../js/mode-toggle.js" defer></script>
+    <script src="../js/language-toggle.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -17,10 +18,10 @@
 
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
+                    <a class="nav__link" id="nav-about" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link nav__link--button" href="obstacle.html">Meld een obstakel</a>
+                    <a class="nav__link nav__link--button" id="nav-report" href="obstacle.html">Meld een obstakel</a>
                 </li>
             </ul>
         </nav>
@@ -48,9 +49,9 @@
             <img class="thanks-card__check thanks-card__check--color" src="../images/icons/check-yellow.png" alt="" aria-hidden="true">
             <img class="thanks-card__check thanks-card__check--bw" src="../images/icons/check-black.png" alt="" aria-hidden="true">
             <h1 class="thanks-card__title" id="thanks-title">Bedankt!</h1>
-            <p class="thanks-card__text">Jouw melding helpt<br>Brussel vooruit.</p>
+            <p class="thanks-card__text" id="thanks-text">Jouw melding helpt<br>Brussel vooruit.</p>
 
-            <a class="thanks-card__button" href="../index.html">Terug naar de<br>homepagina</a>
+            <a class="thanks-card__button" id="home-button" href="../index.html">Terug naar de<br>homepagina</a>
         </section>
     </main>
 </body>

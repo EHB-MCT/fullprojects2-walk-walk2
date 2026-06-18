@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" href="../images/icons/Fav.png" type="/images/icons/Fav">
     <script src="../js/mode-toggle.js" defer></script>
+    <script src="../js/language-toggle.js" defer></script>
     <script src="../js/user-data.js" defer></script>
 </head>
 <body>
@@ -18,10 +19,10 @@
 
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
+                    <a class="nav__link" id="nav-about" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link nav__link--button" href="obstacle.html">Meld een obstakel</a>
+                    <a class="nav__link nav__link--button" id="nav-report" href="obstacle.html">Meld een obstakel</a>
                 </li>
             </ul>
         </nav>
@@ -45,32 +46,32 @@
 
             <section class="details-step" aria-labelledby="comment-title">
                 <div class="details-step__heading">
-                    <p class="details-step__number">3. Commentaar <span class="color-only">(optioneel)</span></p>
+                    <p class="details-step__number" id="comment-step-number">3. Commentaar <span class="color-only">(optioneel)</span></p>
                     <h1 class="details-step__title" id="comment-title">Indien nodig, geef extra informatie<br>over het probleem.</h1>
                 </div>
 
-                <label class="sr-only" for="comment">Beschrijf kort het probleem</label>
+                <label class="sr-only" id="comment-label" for="comment">Beschrijf kort het probleem</label>
                 <textarea class="details-form__comment" id="comment" name="comment" placeholder="Beschrijf kort het probleem..."></textarea>
             </section>
 
             <section class="details-step details-step--contact" aria-labelledby="contact-title">
                 <div class="details-step__heading">
-                    <p class="details-step__number">4. Jouw gegevens <span class="color-only">(optioneel)</span></p>
+                    <p class="details-step__number" id="contact-step-number">4. Jouw gegevens <span class="color-only">(optioneel)</span></p>
                     <h2 class="details-step__title" id="contact-title">Laat je gegevens achter voor<br>opvolging.</h2>
                 </div>
 
-                <label class="sr-only" for="firstName">Voornaam</label>
+                <label class="sr-only" id="first-name-label" for="firstName">Voornaam</label>
                 <input class="details-form__name" id="firstName" name="firstName" type="text" placeholder="Voornaam">
 
-                <label class="sr-only" for="lastName">Naam</label>
-                <input class="details-form__name" id="lastName" name="lastName" type="text" placeholder="Naam">
+                <label class="sr-only" id="last-name-label" for="lastName">Achternaam</label>
+                <input class="details-form__name" id="lastName" name="lastName" type="text" placeholder="Achternaam">
 
-                <label class="sr-only" for="email">E-mailadres</label>
-                <input class="details-form__email" id="email" name="email" type="email" placeholder="E-mail adres">
+                <label class="sr-only" id="email-label" for="email">E-mailadres</label>
+                <input class="details-form__email" id="email" name="email" type="email" placeholder="E-mailadres">
 
-                <label class="sr-only" for="gemeente">Gemeente</label>
+                <label class="sr-only" id="gemeente-label" for="gemeente">Gemeente</label>
                 <select class="details-form__select" id="gemeente" name="gemeente">
-                    <option value="">Kies je gemeente</option>
+                    <option id="gemeente-placeholder" value="">Kies je gemeente</option>
                     <option value="1000">1000 Brussel</option>
                     <option value="1030">1030 Schaarbeek</option>
                     <option value="1040">1040 Etterbeek</option>
@@ -92,18 +93,18 @@
                     <option value="1210">1210 Sint-Joost-ten-Node</option>
                     <option value="walk">Walk Brussels</option>
                     <option value="vrijetrottoirslibres">Vrije trottoirs libres</option>
-                    <option value="autreobstacle">Andere obstakels</option>
+                    <option id="other-obstacles-option" value="autreobstacle">Andere obstakels</option>
                 </select>
 
                 <label class="details-form__newsletter" for="newsletter">
                     <input class="details-form__newsletter-input" id="newsletter" name="newsletter" type="checkbox">
-                    <span>Ik ga akkoord om de nieuwsbrief van Walk.Brussels te ontvangen.</span>
+                    <span id="newsletter-text">Ik ga akkoord om de nieuwsbrief van Walk.Brussels te ontvangen.</span>
                 </label>
 
                 <p class="details-form__result" id="formResult" aria-live="polite"></p>
             </section>
 
-            <button class="details-form__button" type="submit">Verstuur melding</button>
+            <button class="details-form__button" id="submit-button" type="submit">Verstuur melding</button>
         </form>
     </main>
 </body>

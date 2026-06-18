@@ -37,6 +37,7 @@ body{
 
 .bw-mode .nav__link--button,
 .bw-mode .mode-toggle,
+.bw-mode .language-toggle,
 .bw-mode .hero__button,
 .bw-mode .photo-form__button,
 .bw-mode .details-form__button,
@@ -47,13 +48,20 @@ body{
 }
 
 .bw-mode .nav__link--button,
-.bw-mode .mode-toggle{
+.bw-mode .mode-toggle,
+.bw-mode .language-toggle{
     padding:0.9rem 1.25rem;
     font-size:1.35rem;
 }
 
-.bw-mode .mode-toggle{
+.bw-mode .mode-toggle,
+.bw-mode .language-toggle{
     border:0.1rem solid #000000;
+}
+
+.bw-mode .language-toggle{
+    min-width:5.5rem;
+    font-weight:800;
 }
 
 .bw-mode .hero{
@@ -567,7 +575,8 @@ body{
         text-align:center;
     }
 
-    .bw-mode .mode-toggle{
+    .bw-mode .mode-toggle,
+    .bw-mode .language-toggle{
         background:#000000;
         color:#ffffff;
         padding:0.85rem 1rem;

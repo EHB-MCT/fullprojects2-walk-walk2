@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/icons/Fav.png" type="/images/icons/Fav">
     <script src="js/mode-toggle.js" defer></script>
+    <script src="js/language-toggle.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -17,10 +18,10 @@
 
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
+                    <a class="nav__link" id="nav-about" href="https://www.walk.brussels/nl/qui-sommes-nous">Over ons</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link nav__link--button" href="pages/obstacle.html">Meld een obstakel</a>
+                    <a class="nav__link nav__link--button" id="nav-report" href="pages/obstacle.html">Meld een obstakel</a>
                 </li>
             </ul>
         </nav>
@@ -31,17 +32,17 @@
             <div class="hero__content">
                 <div class="hero__copy">
                     <h1 class="hero__title">
-                        <span class="hero__title-desktop">Maak stoepen in Brussel toegankelijker</span>
-                        <span class="hero__title-mobile">De stoep is van iedereen.</span>
+                        <span class="hero__title-desktop" id="hero-title-desktop">Maak stoepen in Brussel toegankelijker</span>
+                        <span class="hero__title-mobile" id="hero-title-mobile">De stoep is van iedereen.</span>
                     </h1>
-                    <p class="hero__text hero__text--desktop">
+                    <p class="hero__text hero__text--desktop" id="hero-text-desktop">
                         Meld snel een obstakel op het voetpad en help Walk Brussels de stad veiliger te maken voor iedereen.
                     </p>
                     <p class="hero__text hero__text--mobile">
-                        <span class="hero__text-color">Zie je een obstakel op het voetpad? Meld het en help Brussel toegankelijk te houden.</span>
-                        <span class="hero__text-bw">Zie je een obstakel?<br>Meld het hier.</span>
+                        <span class="hero__text-color" id="hero-text-mobile-color">Zie je een obstakel op het voetpad? Meld het en help Brussel toegankelijk te houden.</span>
+                        <span class="hero__text-bw" id="hero-text-mobile-bw">Zie je een obstakel?<br>Meld het hier.</span>
                     </p>
-                    <a class="hero__button" href="pages/obstacle.html">Meld een obstakel</a>
+                    <a class="hero__button" id="hero-button" href="pages/obstacle.html">Meld een obstakel</a>
                 </div>
 
                 <div class="hero__media">
@@ -61,17 +62,17 @@
                     <li class="hero__feature">
                         <img class="hero__feature-icon hero__feature-icon--color" src="images/icons/yellow walker.png" alt="">
                         <img class="hero__feature-icon hero__feature-icon--bw" src="images/icons/walker.png" alt="">
-                        <p>Voor een vlotte en veilige stoep</p>
+                        <p id="hero-feature-safe">Voor een vlotte en veilige stoep</p>
                     </li>
                     <li class="hero__feature">
                         <img class="hero__feature-icon hero__feature-icon--color" src="images/icons/yellow rolstoel.png" alt="">
                         <img class="hero__feature-icon hero__feature-icon--bw" src="images/icons/toilet.png" alt="">
-                        <p>Toegankelijk voor iedereen</p>
+                        <p id="hero-feature-accessible">Toegankelijk voor iedereen</p>
                     </li>
                     <li class="hero__feature">
                         <img class="hero__feature-icon hero__feature-icon--color" src="images/icons/yellow house.png" alt="">
                         <img class="hero__feature-icon hero__feature-icon--bw" src="images/icons/village.png" alt="">
-                        <p>Samen maken we Brussel mooier</p>
+                        <p id="hero-feature-city">Samen maken we Brussel mooier</p>
                     </li>
                 </ul>
             </div>
