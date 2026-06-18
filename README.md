@@ -48,3 +48,6 @@ Download or clone the project and open `index.html` in a browser.
 ## Authors
 
 Mehdi Amrani
+Sabri Changuiti
+Yanis Mesbahi
+Darcy Ngenzi
