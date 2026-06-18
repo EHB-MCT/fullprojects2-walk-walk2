@@ -69,7 +69,10 @@
 
 .hero__media::before{
     position:absolute; /* Legt de gradient bovenop de foto */
-    inset:0;
+    top:0;
+    right:0;
+    bottom:0;
+    left:60px;
     z-index:1; /* Zet de gradient boven de foto */
     background:linear-gradient(90deg, var(--color-blue) 0%, rgba(37, 35, 79, 0.75) 18%, rgba(37, 35, 79, 0) 48%);
     content:""; /* Maakt het pseudo-element zichtbaar */
@@ -80,6 +83,7 @@
     width:100%;
     height:100%;
     object-fit:cover; /* Vult het beeldvlak zonder de foto uit verhouding te trekken */
+    margin-left: 60px;
 }
 
 .hero__image--bw{
@@ -114,7 +118,8 @@
     }
 
     .bw-mode .hero__media::before{
-        display:none;
+        display:block;
+        background:linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.75) 18%, rgba(255, 255, 255, 0) 48%); /* Laat de witte achtergrond zacht overgaan in de foto */
     }
 
     .bw-mode .hero__image{
@@ -172,6 +177,7 @@
     }
 
     .hero__image{
+        margin-left:0;
         object-position:center bottom; /* Toont vooral de onderkant van de foto op mobiel */
     }
 

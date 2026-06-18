@@ -68,10 +68,39 @@
                 <label class="sr-only" for="email">E-mailadres</label>
                 <input class="details-form__email" id="email" name="email" type="email" placeholder="E-mail adres">
 
+                <label class="sr-only" for="gemeente">Gemeente</label>
+                <select class="details-form__select" id="gemeente" name="gemeente">
+                    <option value="">Kies je gemeente</option>
+                    <option value="1000">1000 Brussel</option>
+                    <option value="1030">1030 Schaarbeek</option>
+                    <option value="1040">1040 Etterbeek</option>
+                    <option value="1050">1050 Elsene</option>
+                    <option value="1060">1060 Sint-Gillis</option>
+                    <option value="1070">1070 Anderlecht</option>
+                    <option value="1080">1080 Molenbeek</option>
+                    <option value="1081">1081 Koekelberg</option>
+                    <option value="1082">1082 Sint-Agatha-Berchem</option>
+                    <option value="1083">1083 Ganshoren</option>
+                    <option value="1090">1090 Jette</option>
+                    <option value="1140">1140 Evere</option>
+                    <option value="1150">1150 Sint-Pieters-Woluwe</option>
+                    <option value="1160">1160 Oudergem</option>
+                    <option value="1170">1170 Watermaal-Bosvoorde</option>
+                    <option value="1180">1180 Ukkel</option>
+                    <option value="1190">1190 Vorst</option>
+                    <option value="1200">1200 Sint-Lambrechts-Woluwe</option>
+                    <option value="1210">1210 Sint-Joost-ten-Node</option>
+                    <option value="walk">Walk Brussels</option>
+                    <option value="vrijetrottoirslibres">Vrije trottoirs libres</option>
+                    <option value="autreobstacle">Andere obstakels</option>
+                </select>
+
                 <label class="details-form__newsletter" for="newsletter">
                     <input class="details-form__newsletter-input" id="newsletter" name="newsletter" type="checkbox">
                     <span>Ik ga akkoord om de nieuwsbrief van Walk.Brussels te ontvangen.</span>
                 </label>
+
+                <p class="details-form__result" id="formResult" aria-live="polite"></p>
             </section>
 
             <button class="details-form__button" type="submit">Verstuur melding</button>

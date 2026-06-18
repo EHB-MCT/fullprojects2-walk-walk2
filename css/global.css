@@ -174,7 +174,8 @@ body{
 .bw-mode .photo-upload,
 .bw-mode .details-form__comment,
 .bw-mode .details-form__email,
-.bw-mode .details-form__name{
+.bw-mode .details-form__name,
+.bw-mode .details-form__select{
     border:0.12rem solid #000000;
     background:#ffffff;
     color:#000000;
@@ -432,10 +433,16 @@ body{
 }
 
 .bw-mode .details-form__email,
-.bw-mode .details-form__name{
+.bw-mode .details-form__name,
+.bw-mode .details-form__select{
     height:3.2rem;
     padding:0 1.15rem;
     border:0.1rem solid #cfcfcf;
+    font-size:1.15rem;
+}
+
+.bw-mode .details-form__result{
+    color:#000000;
     font-size:1.15rem;
 }
 

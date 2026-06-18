@@ -328,7 +328,8 @@
 
 .details-form__comment,
 .details-form__email,
-.details-form__name{
+.details-form__name,
+.details-form__select{
     width:100%;
     border:0;
     border-radius:0.15rem;
@@ -356,14 +357,37 @@
 }
 
 .details-form__email,
-.details-form__name{
+.details-form__name,
+.details-form__select{
     height:2.85rem;
     margin: 10px;
     padding: 1.25rem;
 }
 
-.details-form__name{
+.details-form__name,
+.details-form__select{
     margin-top:0.7rem;
+}
+
+.details-form__select{
+    cursor:pointer; /* Toont dat je een keuze kan openen */
+    padding-top:0;
+    padding-bottom:0;
+    color:#111111;
+    line-height:normal;
+}
+
+.details-form__select option{
+    color:#111111;
+}
+
+.details-form__result{
+    min-height:2.4rem;
+    margin-top:0.8rem;
+    color:var(--color-yellow);
+    font-size:0.9rem;
+    line-height:1.15;
+    white-space:pre-line; /* Toont de enters uit JavaScript ook echt op de pagina */
 }
 
 .details-form__newsletter{
@@ -409,6 +433,7 @@
 .details-form__comment:focus,
 .details-form__email:focus,
 .details-form__name:focus,
+.details-form__select:focus,
 .details-form__newsletter-input:focus-visible{
     outline:0.2rem solid var(--color-yellow);
     outline-offset:0.2rem;
